@@ -1,0 +1,34 @@
+@import "./normalize.scss";
+@import "../../sass/index.scss";
+
+* {
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1440px;
+  height: 100%;
+  padding-top: 40px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+@media screen and (max-width: 672px) {
+  body {
+    margin: 0 15px;
+  }
+}

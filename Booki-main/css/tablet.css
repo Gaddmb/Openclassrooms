@@ -1,0 +1,68 @@
+/* Le code ci-dessous correspond à la version responsive uniquement */
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+
+	/* je mets mes div en colonne */
+	.hebergements-and-populaires {
+		flex-direction: column;
+	}
+
+	/* HEBERGEMENET */
+	.hebergements {
+		width: 100%;
+	}
+
+	/* POPULAIRES */
+	.populaires {
+		width: 100%;
+		margin-top: 40px;
+	}
+
+	.populaires-cards {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.populaires-cards a {
+		/* nota bene j'ai divisé 100% par 3 */
+		width: 33%;
+	}
+
+	.populaires-cards .card-title {
+		font-size: 16px;
+	}
+
+	.populaires-cards .card-subtitle {
+		font-size: 13px;
+	}
+
+	/* ACTIVITES */
+	.activites-marseille .conteneur {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.activites-marseille .conteneur a {
+		width: 25%;
+	}
+
+	.carte-image {
+		height: 200px;
+	}
+
+	.container {
+		margin: 0;
+	}
+
+	.topbis {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.hebergements .container a {
+		width: 32%;
+	}
+}

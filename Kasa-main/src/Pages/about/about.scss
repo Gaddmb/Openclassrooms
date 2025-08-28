@@ -1,0 +1,15 @@
+@import "../../sass/index.scss";
+
+.about {
+  margin-top: 50px;
+  @media screen and (max-width: 412px) {
+    margin-top: 30px;
+  }
+
+  .about_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5%;
+  }
+}

@@ -1,0 +1,464 @@
+/****** General ***********/
+* {
+	font-family: "Raleway", sans-serif;
+	/* j'enleve toute les marges par defauts */
+	margin: 0;
+	padding: 0;
+	box-sizing: content-box;
+	text-decoration: none;
+	list-style-type: none;
+}
+
+:root {
+	--main-color: #0065fc;
+	--main-bg-color: #f2f2f2;
+	--filter-bg-color: #deebff;
+}
+
+.fa-solid {
+	color: var(--main-color);
+}
+
+body {
+	display: flex;
+	justify-content: center;
+}
+
+a {
+	color: black;
+}
+
+.main-container {
+	width: 95%;
+	max-width: 1440px;
+	padding: 0 0px;
+	box-sizing: border-box;
+}
+
+.section-title {
+	margin: 0;
+	font-size: 22px;
+}
+
+.title-om {
+	margin-bottom: 30px;
+}
+
+.card {
+	background-color: white;
+	border-radius: 20px;
+	padding: 5px;
+	filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card img {
+	object-fit: cover;
+}
+
+.card-title {
+	font-size: 16px;
+}
+
+.euro {
+	font-weight: 700;
+}
+
+.neutralStar {
+	color: #f2f2f2;
+}
+
+/****** Hebergements And Populaires ***********/
+.hebergements-and-populaires {
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.hebergements-and-populaires section {
+	background-color: var(--main-bg-color);
+	border-radius: 20px;
+	padding: 30px;
+	box-sizing: border-box;
+}
+
+/****** Hebergements ***********/
+.hebergements {
+	width: 65%;
+}
+
+/****** Populaires ***********/
+.populaires {
+	width: 32%;
+}
+
+.populaires-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.populaires-cards .card {
+	display: flex;
+	margin-top: 33px;
+	margin-right: 10px;
+}
+
+.populaires-cards img {
+	width: 33%;
+	height: 136px;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+
+.populaires-cards .card-content {
+	width: 67%;
+	padding-left: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	box-sizing: border-box;
+}
+
+.populaires-cards .card-title {
+	margin-top: 10px;
+	margin-bottom: 4px;
+}
+
+.populaires-cards .card-subtitle {
+	margin: 0;
+}
+
+.populaires-cards .card-rating {
+	margin-bottom: 5px;
+}
+
+
+/* Header */
+header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.logo {
+	padding-top: 20px;
+}
+
+header img {
+	width: 61.09px;
+	height: 19px;
+}
+
+ul.menu {
+	display: flex;
+}
+
+li.hebergements,
+li.activites {
+	width: 150px;
+	text-align: center;
+	padding-top: 10px;
+}
+
+.menu li.hebergements:hover a,
+.menu li.activites:hover a {
+	color: #0065FC;
+}
+
+
+.menu li.hebergements:hover,
+.menu li.activites:hover {
+	border-top: 1px solid #0065FC;
+}
+
+/* EN DESSOUS DU HEADER */
+.top {
+	margin-top: 50px;
+}
+
+form {
+	/* j'aligne mes elements */
+	display: flex;
+	margin: 20px 0;
+}
+
+/* BARRE DE RECHERCHER*/
+.barsearch input,
+.barsearchbis input {
+	width: 200px;
+	height: 45px;
+	border: none;
+	font-weight: 700;
+	text-align: center;
+}
+
+/* je fais une modification  de ma div barsearch qui comporte le logo et la barre de recherche */
+form .barsearch,
+form .barsearchbis {
+	background-color: #f2f2f2;
+	border-radius: 10px 0px 0px 10px;
+	border: none;
+	padding-bottom: 1px;
+	padding-top: 1px;
+}
+
+input::placeholder {
+	color: black;
+}
+
+form .fa-solid {
+	padding: 16px;
+}
+
+/* BOUTON */
+button {
+	border-radius: 0px 10px 10px 0px;
+	background-color: #0065fc;
+	color: white;
+	border: none;
+	padding: 11px;
+	cursor: pointer;
+}
+
+.buttonsearch-text {
+	display: block;
+	font-weight: bold;
+}
+
+.buttonsearch-icon {
+	display: none;
+}
+
+.recherche {
+	background-color: #0065fc;
+	border-radius: 10px 10px 10px 10px;
+	border: none;
+	color: white;
+}
+
+.topsearch .fa-solid {
+	color: #000000;
+}
+
+.topsearch-location {
+	display: flex;
+	border-radius: 15px 0px 0px 15px;
+	background: #F2F2F2;
+}
+
+.topsearch-input {
+	border: 1px solid #F2F2F2;
+}
+
+input::placeholder {
+	padding-left: 5px;
+	font-weight: bold;
+}
+
+.topbis .fa-solid {
+	color: #0065FC;
+}
+
+/* FILTRE */
+.topbis {
+	/* un display pour mon conteneur  */
+	display: flex;
+	flex-direction: row;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+	align-items: center;
+}
+
+.xtopbis .xglobe-heart,
+.xtopbis .xglobe-fire,
+.xtopbis .xglobe-man,
+.xtopbis .xglobe-money {
+	border: 1px solid #d9d9d9;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+/* MODIFICATION DE MA LISTE DANS L'ELEMENT FILTRE */
+.xtopbis {
+	display: flex;
+	font-weight: 700;
+}
+
+.xtopbis li {
+	padding: 10px 20px;
+	margin: 5px;
+}
+
+.xglobe-man .fa-solid,
+.xglobe-heart .fa-solid,
+.xglobe-fire .fa-solid,
+.xglobe-money .fa-solid {
+	padding-right: 10px;
+}
+
+.xglobe-heart:hover,
+.xglobe-fire:hover,
+.xglobe-money:hover,
+.xglobe-man:hover {
+	background-color: #deebff;
+}
+
+/* INFO */
+
+.top-info {
+	margin-bottom: 20px;
+
+}
+
+.top-info .fa-solid {
+	border: 1px solid #d9d9d9;
+	border-radius: 20px;
+	padding: 5px 10px 5px 10px;
+	margin-right: 5px;
+	color: #0065FC;
+}
+
+.xglobebis {
+	font-size: 18px;
+	font-weight: bold;
+	margin-right: 7px;
+}
+
+/* Hebergement a Marseille */
+
+/* j'apporte une modification global dans mon conteneur hebergement a marseille */
+.container {
+	display: flex;
+	/* pur qu'il soit aligné dans mon conteneur */
+	justify-content: space-between;
+	margin: 30px auto;
+	/* pour pour bieN definir la hauteur ainsi que la largeur de ma boite */
+	box-sizing: border-box;
+	flex-wrap: wrap;
+}
+
+.hebergements .container a {
+	/* nota Bené j'ai divisé 100% par 3 pour mes colonnes soit aligne équitablement */
+	width: 30%;
+	margin-bottom: 30px;
+}
+
+/* M'OCCUPE DE CHAQUE CARRE DANS MON CONTENEUR */
+.containercard {
+	background-color: #ffffff;
+	border-radius: 20px;
+}
+
+.containercard article {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+}
+
+.container .containercard img {
+	width: 100%;
+	height: 130px;
+	/* un object-fit pour avoir une bonne qualite D'image*/
+	object-fit: cover;
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+}
+
+.xcarte-image {
+	padding: 5px;
+}
+
+.xcarte-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+	margin: 0 0 10px;
+}
+
+.xcarte-rating, .xcarte-text {
+	margin: 3px 2px 0px 10px;
+}
+
+.supertitre {
+	margin-top: 10px;
+}
+
+/* ACTIVITES A MARSEILLE */
+.conteneur {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+	/* pour pour bieN definir la hauteur ainsi que la largeur de ma boite */
+	box-sizing: border-box;
+	gap: 25px;
+}
+
+.conteneur .carte h3 {
+	margin: 15px;
+}
+
+.activites-marseille {
+	margin-top: 65px;
+	display: flex;
+	flex-direction: column;
+}
+
+.activites-marseille .card-container {
+	background-color: white;
+	/* nota béné meme chose j'ai divisé 100% par 4 */
+	width: 25%;
+	border-radius: 20px;
+	box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.carte-image {
+	height: 380px;
+	margin-bottom: 10px;
+}
+
+.conteneur img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+
+}
+
+/* ici EST LA PARTI DU FOOTER */
+footer {
+	background-color: #f2f2f2;
+	width: 100%;
+	/* pas forcement bessoin mais pour un reset du footer */
+	flex-shrink: 0;
+	flex-wrap: wrap;
+}
+
+footer .footer-contenu {
+	/* pour que mes element soit centré */
+	margin: 0 auto;
+	/* mon copain flex pour aligné mes elements et soit mobile */
+	display: flex;
+	/* pour aligné mes mots en haut */
+	align-items: flex-start;
+	padding: 20px;
+}
+
+footer .footer-contenu h4 {
+	padding-bottom: 10px;
+}
+
+footer .footer-contenu ul {
+	list-style-type: none;
+}
+
+footer .footer-contenu ul li {
+	/* je mets un ecart entre mes liste en haut en bas mais pas a gaucher ni a droite  */
+	padding: 5px 0px;
+}
+
+footer .bloc-contenu {
+	/* je dis a mes bloc de prend 100% du footer */
+	width: 100%;
+}

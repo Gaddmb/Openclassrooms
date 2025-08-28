@@ -1,0 +1,512 @@
+/**** General règle ****/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  text-decoration: none;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+a {
+  color: black;
+}
+
+/**** LOADER *****/
+
+.loader {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  animation: disappear 2s forwards 1s;
+  transform-origin: top;
+  background-color: rgba(128, 128, 128, 0.5);
+}
+
+.loader::after {
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-top: 15px solid #ff79da;
+  border-bottom: 15px solid #9356dc;
+  border-left: 15px solid #9356dc;
+  border-right: 15px solid #9356dc;
+  border-radius: 50%;
+  animation: spin 3s infinite linear;
+}
+
+@keyframes disappear {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes quatorspin {
+  0% {
+    transform: rotate(360deg);
+  }
+}
+
+/**** Header ****/
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+header .logo {
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+header .logo img {
+  object-fit: contain;
+  margin: 14px auto 5px;
+  width: 40%;
+}
+
+header .location {
+  text-align: center;
+  background-color: #eaeaea;
+}
+
+header .location p {
+  margin: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #353535;
+  font-family: "Roboto";
+}
+
+header .location .fa-solid {
+  padding: 0 15px;
+}
+
+/***** Sous header ****/
+
+.sous-header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(white, #eaeaea);
+}
+
+.sous-header h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  margin: 20px 0px;
+}
+
+.sous-header p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+}
+
+/*** Bouton ****/
+
+section .btn {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0px;
+}
+
+section .btn button {
+  color: white;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 16px;
+  align-items: center;
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 13px 18px;
+  border: none;
+  transition: all 1s;
+}
+
+.btn button:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/**** fonctionnement *****/
+
+.main-container-fonctionnement {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 0px 20px;
+}
+
+.tittle-fonctionnement {
+  margin-top: 48px;
+  margin-bottom: 26px;
+}
+
+.container-fonctionnement h2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: 48px;
+  margin-bottom: 26px;
+}
+
+.container-fonctionnement ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 24px;
+  margin-bottom: 68px;
+}
+
+.container-fonctionnement li {
+  display: flex;
+  align-items: center;
+  height: 72px;
+  width: 100%;
+  background-color: #f5f3f3;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  position: relative;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.container-fonctionnement li span {
+  color: white;
+  height: 25px;
+  width: 25px;
+  background-color: #9356dc;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -15px;
+}
+
+.container-fonctionnement li .fa-mobile-alt,
+.container-fonctionnement li .fa-list-ul,
+.container-fonctionnement li .fa-store {
+  padding: 0 20px;
+}
+
+.container-fonctionnement .fa-mobile-alt,
+.container-fonctionnement .fa-list-ul {
+  color: #7e7e7e;
+}
+
+.container-fonctionnement .fa-store {
+  color: #9356dc;
+}
+
+.container-fonctionnement li p {
+  font-size: 14px;
+  padding: 27px 0;
+}
+
+/**** RESTAURANT ****/
+
+.main-container-card {
+  background-color: #f5f3f3;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  flex-direction: column;
+  padding: 0px 10px;
+}
+
+.container-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+}
+
+.title-restaurant {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  padding: 50px 0px 20px 0px;
+}
+
+.container-card .card {
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  width: 100%;
+  height: 241px;
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.container-card .card img {
+  object-fit: cover;
+  width: 100%;
+  height: 170px;
+  border-radius: 20px 20px 0 0;
+}
+
+.container-card .card-text {
+  padding: 0 13px;
+  padding-top: 8px;
+}
+
+/**** card new *****/
+
+.container-card .heart {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-card .new {
+  position: absolute;
+  right: 15px;
+  top: 13px;
+  padding: 7px;
+  background-color: #99e2d0;
+  color: #008766;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.container-card .heart .heart__far {
+  position: absolute;
+  right: 16px;
+  font-size: 15px;
+  color: #060404;
+}
+
+.container-card .heart .heart__fas {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  position: absolute;
+  cursor: pointer;
+  right: 16px;
+  font-size: 15px;
+  transition: 1s ease-in-out;
+}
+
+.container-card .heart .heart__fas:hover {
+  background-image: linear-gradient(#ff79da, #9356dc);
+  opacity: 1;
+}
+
+/*** Footer ****/
+
+.container-footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  color: white;
+  padding: 25px 20px;
+}
+
+.container-footer li {
+  list-style-type: none; 
+  padding-top: 7px;;
+}
+
+.container-footer ul {
+  margin-top: 16px;
+}
+
+.container-footer .logo-footer {
+  font-family: "Shrikhand";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.container-footer .fa-solid {
+  margin-right: 10px;
+}
+
+.container-footer a {
+  color: white;
+}
+
+/*** Media @ ****/
+
+@media (min-width: 768px) {
+  /**** header ****/
+
+  header .logo img {
+    height: 34px;
+  }
+
+  .sous-header h1 {
+    font-size: 40px;
+  }
+
+  /*** fonctionnement *****/
+
+  .main-container-fonctionnement ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 24px;
+    margin-bottom: 68px;
+  }
+
+  /***** Restaurant *****/
+
+  .main-container-card {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .container-card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .container-card .card {
+    width: 45%;
+    flex-direction: column;
+    display: flex;
+  }
+
+  .title-restaurant {
+    margin-left: 25px;
+  }
+
+
+ /*** Footer *****/
+ .container-footer {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.container-footer ul {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0;
+}
+
+.container-footer li {
+  padding: 0px 10px;
+}
+
+
+  @media (min-width: 1024px) {
+
+
+    
+    /***** focntionnement ******/
+
+    .main-container-fonctionnement {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      width: 60%;
+    }
+
+    /***** Restaurant ******/
+
+    .main-container-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container-card {
+      margin: 0 auto;
+      width: 65%;
+    }
+
+    .title-restaurant {
+      margin-left: 20%;
+    }
+
+        /**** footer ***/
+    
+    .container-footer {
+      padding-top: 50px;
+      padding-bottom: 25px;
+      
+    }
+
+    .container-footer .logo-footer {
+      margin-right: 30px;
+      margin-left: 70px;
+    }
+
+    .container-footer .footer-espace {
+      margin-left: 30px;
+    }
+
+    .space {
+      margin-left: 30px;
+    }
+    
+  }
+}

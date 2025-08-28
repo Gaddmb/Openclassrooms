@@ -1,0 +1,33 @@
+@import "../../sass/index.scss";
+
+.main_gallery {
+  display: flex;
+  background-color: $color-grey;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin: 50px 0;
+  border-radius: 25px;
+  padding: 50px;
+  justify-content: space-between;
+
+  @media screen and (max-width: 412px) {
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px;
+  }
+
+  @media screen and (max-width: 1100px) {
+    .main_gallery {
+      justify-content: center;
+    }
+    .card_gallery {
+      width: 45%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .card_gallery {
+      width: 100%;
+    }
+  }
+}

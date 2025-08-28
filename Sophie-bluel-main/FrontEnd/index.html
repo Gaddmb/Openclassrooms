@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sophie Bluel - Architecte d'intérieur</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="./assets/accueil.css" />
+  </head>
+  <body>
+    <!-- black Bar -->
+    <div class="black-Bar hidden admin-element">
+      <button class="btnblack-bar">
+        <i class="fa-regular fa-pen-to-square"></i>
+        Mode édition
+      </button>
+      <button class="second-btnblack-bar">Publier les changements</button>
+    </div>
+
+    <header>
+      <h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1>
+      <nav>
+        <ul>
+          <li>projets</li>
+          <li>contact</li>
+          <a href="./login.html" id="login-link">
+            <li>login</li>
+          </a>
+          <li><img src="./assets/icons/instagram.png" alt="Instagram" /></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="introduction">
+        <figure>
+          <img src="./assets/images/sophie-bluel.png" alt="" />
+        </figure>
+        <article class="introduction">
+          <h2>Designer d'espace</h2>
+          <p>
+            Je raconte votre histoire, je valorise vos idées. Je vous accompagne
+            de la conception à la livraison finale du chantier.
+          </p>
+          <p>
+            Chaque projet sera étudié en commun, de façon à mettre en valeur les
+            volumes, les matières et les couleurs dans le respect de l’esprit
+            des lieux et le choix adapté des matériaux. Le suivi du chantier
+            sera assuré dans le souci du détail, le respect du planning et du
+            budget.
+          </p>
+          <p>
+            En cas de besoin, une équipe pluridisciplinaire peut-être constituée
+            : architecte DPLG, décorateur(trice)
+          </p>
+        </article>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="title-modal-button">
+            <h2>Mes Projets</h2>
+            <button class="modal-btn-title hidden admin-element">
+              <i class="fa-regular fa-pen-to-square"></i>modifier
+            </button>
+          </div>
+          <div class="container-onglets"></div>
+
+          <div class="gallery"></div>
+        </div>
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Vous avez un projet ? Discutons-en !</p>
+        <form action="#" method="post">
+          <label for="name">Nom</label>
+          <input type="text" name="name" id="name" />
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" />
+          <label for="message">Message</label>
+          <textarea name="message" id="message" cols="30" rows="10"></textarea>
+          <input type="submit" value="Envoyer" />
+        </form>
+      </section>
+
+      <div class="modal-container hidden modal-main">
+        <div class="modal-main__content">
+          <div class="modal">
+            <button class="close-modal modal-trigger2">X</button>
+            <h2>Galerie photo</h2>
+            <div class="modal-img-container"></div>
+            <div class="btn-modal">
+              <div class="line-main"></div>
+              <button class="add-picture modal-trigger">
+                Ajouter une photo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-container hidden modal-add">
+        <div class="modal-add__content">
+          <div class="modal">
+            <button class="back-modal">
+              <i class="back fa-solid fa-arrow-left fa-xl"></i>
+            </button>
+            <button class="close-modal modal-trigger2">X</button>
+            <h2>Ajout photo</h2>
+            <div class="modal-img-preview">
+              <img
+                src="./assets/icons/placeholder.svg"
+                alt="placeholder"
+                class="placeholder"
+              />
+              <button class="add-picture">+ Ajouter photo</button>
+              <input type="file" class="img-selected" />
+              <p id="disappears-balise">jpg, png : 4mo max</p>
+            </div>
+
+            <form id="add-project-form">
+              <div class="title-modal">
+                <label for="title">Titre</label>
+                <input type="text" name="title" id="title" />
+              </div>
+              <div class="categorie-modal">
+                <label for="categorie">Catégorie</label>
+                <select name="category" id="categorie">
+                  <option value="none"></option>
+                </select>
+              </div>
+              <div class="line"></div>
+              <p class="error-message"></p>
+              <div class="btn-valide">
+                <input type="submit" value="Valider" id="modal-valider" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <nav>
+        <ul>
+          <li>Mentions Légales</li>
+        </ul>
+      </nav>
+    </footer>
+    <script type="text/javascript" src="./assets/js/accueil.js"></script>
+    <script
+      await
+      defer
+      type="text/javascript"
+      src="./assets/js/modal.js"
+    ></script>
+  </body>
+</html>

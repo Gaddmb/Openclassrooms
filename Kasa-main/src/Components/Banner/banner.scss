@@ -1,0 +1,28 @@
+@import "../../sass/index.scss";
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../../assets/image/banner.png");
+  background-position: center;
+  background-size: cover;
+  height: 223px;
+  width: 100%;
+
+  p {
+    color: $color-white;
+    font-size: 48px;
+    font-weight: 500;
+  }
+
+  @media screen and (max-width: 412px) {
+    height: 111px;
+
+    p {
+      font-size: 24px;
+    }
+  }
+}
